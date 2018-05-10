@@ -1,0 +1,177 @@
+/* COMPONENTS */
+/* ------------------------------------------------------------ */
+
+html{
+	font-family: 'Roboto', sans-serif;
+	/* overflow-x: hidden; */
+	font-size: 15px;
+}
+h2{
+	font-family: 'Slabo 27px', serif;
+	font-size: 2.5em;
+	margin-bottom: 20px;
+}
+p{
+	line-height: 25px;
+}
+.flex-container{
+	display: flex;
+}
+.container-960{
+	max-width: 960px;
+	margin: 0 auto;
+}
+.container-1024{
+	max-width: 1024px;
+	margin: 0 auto;
+}
+.container-1366{
+	max-width: 1366px;
+	margin: 0 auto;
+}
+.reservation-button{
+	padding: 15px 20px;
+	background-color: #f2dd7b;
+	text-decoration: none;
+	color: black;
+	/* color: white; */
+	font-weight: bold;
+	font-size: 1.1em;
+	transition: .3s ease;
+	/* box-shadow: 2px 2px 0px 0px #ab921d; */
+}
+.reservation-button:hover{
+	background-color: #ab921d;
+}
+
+/* elements */
+/* ------------------------------------------------------------ */
+.header{
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+}
+.header_video-container{
+	width: 100%;
+
+}
+.header_video-container_video{
+	height: 100vh;
+	margin-left: calc(((100vh * 2.353) - 100vw) / -2);
+}
+.header_video-container_play-button{
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	top: calc(50% - 40px);
+	left: calc(50% - 40px);
+	cursor: pointer;
+}
+.header_video-container_play-button img{
+	width: 50px;
+	padding: 15px;
+}
+.header_video-controls{
+	display: none;
+	position: absolute;
+	left: calc(50% - 100px);
+	bottom: 20px;
+}
+.header_video-control{
+	background-color: rgba(0, 0, 0, .5);
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+}
+.header_video-control:hover{
+	background-color: rgba(0, 0, 0, .9);
+}
+.header_video-control img{
+	padding: 10px;
+	height: 30px;
+}
+
+.nav-contrast{
+	background: white;
+	border-bottom: 1px solid rgba(230, 230, 230, 1);
+	transition: .3s ease;
+}
+
+.nav{
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+	transition: .3s ease;
+}
+.nav_logo-container_logo{
+	width: 130px;
+}
+.nav_container{
+	height: 80px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+}
+.nav_reservation-button-container{
+	display: flex;
+	align-items: center;
+}
+.nav_reservation-button-container_coming-soon{
+	padding-right: 10px;
+}
+
+.about{
+	padding: 150px 30px;
+}
+.about_quote{
+	font-family: 'Slabo 27px', serif;
+	font-size: 3em;
+	line-height: 1.4em;
+}
+.about_quote--big{
+	padding: 0px;
+	font-size: 1.5em;
+	line-height: .8em;
+	color: #f2dd7b;
+}
+.about_figure{
+	width: 100%;
+	text-align: center;
+}
+.about_figure_icon{
+	padding: 20px;
+	width: 100px;
+
+}
+
+footer{
+	margin-top: 100px;
+	width: 100%;
+	text-align: center;
+}
+footer p{
+	margin-bottom: 100px;
+}
+footer p span{
+	font-weight: bold;
+}
+footer figure{
+	margin-bottom: 40px;
+}
+footer figure img{
+	width: 80px;
+}
+
+
+
+/* tablet (max 480px) */
+@media only screen and (max-width: 960px) {
+	
+}
+
+/* mobile (max 320px) */
+@media only screen and (min-width: 220px) and (max-width: 580px){
+	
+
+}

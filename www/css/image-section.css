@@ -1,0 +1,16 @@
+.images{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.images_column{
+    max-width: calc(100% / 3);
+}
+
+.images_column img{
+    box-sizing: border-box;
+    padding: 5px;
+    width: 100%;
+    display: block;
+}
