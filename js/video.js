@@ -30,13 +30,26 @@
 
         timeVideo(34);
         addEventListeners();
+        videoStart()
     })();
 
     function videoStart() {
         playButton.style.display = "none";
         videoControls.style.display = "flex";
         timeVideo(0);
-        video.play();
+
+        let promise = video.play();
+
+        if (promise !== undefined) {
+            promise.then(_ => {
+              // Autoplay started!
+            }).catch(error => {
+              // Autoplay was prevented.
+              // Show a "Play" button so that user can start playback.
+              muteVideo();
+              videoStart();
+            });
+          }
     }
 
     function videoEnded() {
@@ -66,18 +79,14 @@
         videoEnded();
     }
 
-    function playVideo() {
-        video.play();
-    }
-
     function muteVideo() {
         if(muted){
-            video.volume = 1;
+            video.muted = false;
             muted = false;
             soundImage.style.display = "none";
             muteImage.style.display = "block";
         }else{
-            video.volume = 0;
+            video.muted = true;
             muted = true;
             soundImage.style.display = "block";
             muteImage.style.display = "none";
@@ -91,8 +100,9 @@
     function windowScrolled() {
         let position = video.getBoundingClientRect();
         let videoHeight = video.clientHeight;
-        if(position.top < (videoHeight * -1)/2){     
-            video.pause();
+        if(position.top < (videoHeight * -1)/2){
+            paused = false;     
+            pauseVideo();
             nav.classList.add("nav-contrast");
         }else{
             nav.classList.remove("nav-contrast");

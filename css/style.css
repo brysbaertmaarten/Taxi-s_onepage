@@ -117,13 +117,6 @@ p{
 	align-items: center;
 	padding: 0 20px;
 }
-.nav_reservation-button-container{
-	display: flex;
-	align-items: center;
-}
-.nav_reservation-button-container_coming-soon{
-	padding-right: 10px;
-}
 
 .about{
 	padding: 150px 30px;
