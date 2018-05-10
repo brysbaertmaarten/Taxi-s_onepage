@@ -74,7 +74,7 @@ p{
 .header_video-controls{
 	display: none;
 	position: absolute;
-	left: calc(50% - 100px);
+	left: calc(50% - 75px);
 	bottom: 20px;
 }
 .header_video-control{
@@ -82,6 +82,7 @@ p{
 	width: 50px;
 	height: 50px;
 	cursor: pointer;
+	overflow: hidden;
 }
 .header_video-control:hover{
 	background-color: rgba(0, 0, 0, .9);
@@ -89,6 +90,9 @@ p{
 .header_video-control img{
 	padding: 10px;
 	height: 30px;
+}
+.header_video-control_image-sound{
+	display: none;
 }
 
 .nav-contrast{
