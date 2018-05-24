@@ -13,7 +13,8 @@
         paused = false,
         muteImage,
         soundImage,
-        playPauseImages;
+        playPauseImages,
+        stopped;
 
     (function init() {
         video = document.querySelectorAll(".header_video-container_video")[0];
@@ -28,13 +29,11 @@
         pause = document.querySelectorAll(".video-control-pause")[0];
         stop = document.querySelectorAll(".video-control-stop")[0];
 
-        timeVideo(34);
         addEventListeners();
-        videoStart()
     })();
 
     function videoStart() {
-        playButton.style.display = "none";
+        // playButton.style.display = "none";
         videoControls.style.display = "flex";
         timeVideo(0);
 
@@ -52,15 +51,11 @@
           }
     }
 
-    function videoEnded() {
-        timeVideo(34);
-        playPauseImages[0].style.display = "block";
-        playPauseImages[1].style.display = "none";
-        playButton.style.display = "block";
-        videoControls.style.display = "none";
-    }
-
     function pauseVideo() {
+        if(stopped){
+            timeVideo(0);
+            stopped = false;
+        }
         if (paused){
             video.play();
             paused = false;
@@ -75,8 +70,10 @@
     }
 
     function stopVideo() {
-        video.pause();
-        videoEnded();
+        paused = false;
+        pauseVideo();
+        timeVideo(10.5);
+        stopped = true;
     }
 
     function muteVideo() {
@@ -100,22 +97,25 @@
     function windowScrolled() {
         let position = video.getBoundingClientRect();
         let videoHeight = video.clientHeight;
-        if(position.top < (videoHeight * -1)/2){
+        if(position.top < (videoHeight * -1)/2 || position.top > (videoHeight * 1)/2){
             paused = false;     
             pauseVideo();
-            nav.classList.add("nav-contrast");
         }else{
-            nav.classList.remove("nav-contrast");
+            paused = true;
+            pauseVideo();
         }
+    }
+
+    function deleteEventListeners() {
+        window.removeEventListener('scroll', windowScrolled);
     }
 
     function addEventListeners() {
         video.addEventListener('ended', () => {
-            videoEnded();
+            stopVideo();
         })
         window.addEventListener('scroll', windowScrolled);
-        playButton.addEventListener('click', videoStart);
-
+        pause.addEventListener('click', deleteEventListeners)
         pause.addEventListener('click', pauseVideo);
         stop.addEventListener('click', stopVideo);
         mute.addEventListener('click', muteVideo);

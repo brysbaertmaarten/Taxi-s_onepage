@@ -2,14 +2,19 @@
 /* ------------------------------------------------------------ */
 
 html{
-	font-family: 'Roboto', sans-serif;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: 400;
 	/* overflow-x: hidden; */
 	font-size: 15px;
 }
 h2{
-	font-family: 'Slabo 27px', serif;
-	font-size: 2.5em;
+	color: #ab9200;
+	text-transform: uppercase;
+	font-size: 1.6em;
+	letter-spacing: 3px;
 	margin-bottom: 20px;
+	font-family: 'Crimson Text', serif;
+
 }
 p{
 	line-height: 25px;
@@ -29,117 +34,44 @@ p{
 	max-width: 1366px;
 	margin: 0 auto;
 }
-.reservation-button{
-	padding: 15px 20px;
-	background-color: #f2dd7b;
-	text-decoration: none;
-	color: black;
-	/* color: white; */
-	font-weight: bold;
-	font-size: 1.1em;
-	transition: .3s ease;
-	/* box-shadow: 2px 2px 0px 0px #ab921d; */
-}
-.reservation-button:hover{
-	background-color: #ab921d;
-}
 
 /* elements */
 /* ------------------------------------------------------------ */
 .header{
 	height: 100vh;
 	width: 100%;
-	overflow: hidden;
-}
-.header_video-container{
-	width: 100%;
-
-}
-.header_video-container_video{
-	height: 100vh;
-	margin-left: calc(((100vh * 2.353) - 100vw) / -2);
-}
-.header_video-container_play-button{
-	width: 80px;
-	height: 80px;
-	position: absolute;
-	top: calc(50% - 40px);
-	left: calc(50% - 40px);
-	cursor: pointer;
-}
-.header_video-container_play-button img{
-	width: 50px;
-	padding: 15px;
-}
-.header_video-controls{
-	display: none;
-	position: absolute;
-	left: calc(50% - 75px);
-	bottom: 20px;
-}
-.header_video-control{
-	background-color: rgba(0, 0, 0, .5);
-	width: 50px;
-	height: 50px;
-	cursor: pointer;
-	overflow: hidden;
-}
-.header_video-control:hover{
-	background-color: rgba(0, 0, 0, .9);
-}
-.header_video-control img{
-	padding: 10px;
-	height: 30px;
-}
-.header_video-control_image-sound{
-	display: none;
-}
-
-.nav-contrast{
-	background: white;
-	border-bottom: 1px solid rgba(230, 230, 230, 1);
-	transition: .3s ease;
-}
-
-.nav{
-	position: fixed;
-	width: 100%;
-	z-index: 1;
-	transition: .3s ease;
-}
-.nav_logo-container_logo{
-	width: 130px;
-}
-.nav_container{
-	height: 80px;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
-	padding: 0 20px;
+	border-bottom: 6px solid #ab9200;
 }
 
-.about{
-	padding: 150px 30px;
-}
-.about_quote{
-	font-family: 'Slabo 27px', serif;
-	font-size: 3em;
-	line-height: 1.4em;
-}
-.about_quote--big{
-	padding: 0px;
-	font-size: 1.5em;
-	line-height: .8em;
-	color: #f2dd7b;
-}
-.about_figure{
+.header_figure{
 	width: 100%;
 	text-align: center;
 }
-.about_figure_icon{
-	padding: 20px;
-	width: 100px;
-
+.header_reservate{
+	transform: rotate(-90deg);
+	position: absolute;
+	right: calc(-50vh + 30px);
+	width: 100vh;
+	text-align: center;	
+}
+.header_reservate a {
+	display: inline-block;
+	color: #ab9200;
+	padding: 5px 10px;
+	background-color: transparent;
+	text-decoration: none;
+	border-bottom: 2px solid #ab9200; 
+	font-size: 1.4em;
+	transition: all .3s ease;
+}
+.header_reservate a:hover{
+	background-color: #ab9200;
+	color: white;
+}
+.header_img{
+	
 }
 
 footer{
