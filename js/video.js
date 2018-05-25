@@ -30,6 +30,7 @@
         stop = document.querySelectorAll(".video-control-stop")[0];
 
         addEventListeners();
+        stopVideo();
     })();
 
     function videoStart() {
@@ -114,7 +115,7 @@
         video.addEventListener('ended', () => {
             stopVideo();
         })
-        window.addEventListener('scroll', windowScrolled);
+        // window.addEventListener('scroll', windowScrolled);
         pause.addEventListener('click', deleteEventListeners)
         pause.addEventListener('click', pauseVideo);
         stop.addEventListener('click', stopVideo);

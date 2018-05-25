@@ -1,7 +1,11 @@
 .block-1{
-    background-image: url("../media/blck and whte2.jpg");
+    /* background-image: url("../media/blck and whte2.jpg"); */
+    background: linear-gradient(transparent 70%, white),
+      url("../media/blck and whte2.jpg");
     background-size: cover;
     background-position:center 40%;
+    /* background: linear-gradient(rgba(0,0,0,0) 70%, red), url("../media/blck and whte2.jpg"); */
+    
 }
 .block-2{
     width: 100%;
@@ -40,5 +44,5 @@ h3{
 }
 
 .info-block{
-    
+    height: 100%;
 }

@@ -51,16 +51,16 @@ p{
 }
 .header_reservate{
 	transform: rotate(-90deg);
-	position: absolute;
+	position: fixed;
 	right: calc(-50vh + 30px);
 	width: 100vh;
 	text-align: center;	
+	z-index: 1;
 }
 .header_reservate a {
 	display: inline-block;
 	color: #ab9200;
 	padding: 5px 10px;
-	background-color: transparent;
 	text-decoration: none;
 	border-bottom: 2px solid #ab9200; 
 	font-size: 1.4em;

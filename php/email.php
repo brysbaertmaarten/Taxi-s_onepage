@@ -23,7 +23,7 @@
 	$email";
 
 	mail("brysbaertmaarten@hotmail.com","$naam heeft u gecontacteerd",$inhoud);
-	header("index.html");
+	// header("index.html");
 	?>
 </body>
 </html>
